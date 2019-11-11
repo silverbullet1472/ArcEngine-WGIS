@@ -76,6 +76,7 @@
             this.axTOCControl1 = new ESRI.ArcGIS.Controls.AxTOCControl();
             this.skinPanel1 = new CCWin.SkinControl.SkinPanel();
             this.skinPanel2 = new CCWin.SkinControl.SkinPanel();
+            this.menuBikeMap = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.axLicenseControl1)).BeginInit();
             this.OpenMxd.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.axToolbarControl1)).BeginInit();
@@ -307,7 +308,8 @@
             this.menuThemeMap.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuMap,
             this.menuLifeMap,
-            this.menuTourMap});
+            this.menuTourMap,
+            this.menuBikeMap});
             this.menuThemeMap.Name = "menuThemeMap";
             this.menuThemeMap.Size = new System.Drawing.Size(81, 24);
             this.menuThemeMap.Text = "主题地图";
@@ -315,21 +317,21 @@
             // menuMap
             // 
             this.menuMap.Name = "menuMap";
-            this.menuMap.Size = new System.Drawing.Size(138, 24);
+            this.menuMap.Size = new System.Drawing.Size(152, 24);
             this.menuMap.Text = "&普通地图";
             this.menuMap.Click += new System.EventHandler(this.menuMap_Click);
             // 
             // menuLifeMap
             // 
             this.menuLifeMap.Name = "menuLifeMap";
-            this.menuLifeMap.Size = new System.Drawing.Size(138, 24);
+            this.menuLifeMap.Size = new System.Drawing.Size(152, 24);
             this.menuLifeMap.Text = "&生活地图";
             this.menuLifeMap.Click += new System.EventHandler(this.menuLifeMap_Click);
             // 
             // menuTourMap
             // 
             this.menuTourMap.Name = "menuTourMap";
-            this.menuTourMap.Size = new System.Drawing.Size(138, 24);
+            this.menuTourMap.Size = new System.Drawing.Size(152, 24);
             this.menuTourMap.Text = "&游览地图";
             this.menuTourMap.Click += new System.EventHandler(this.menuTourMap_Click);
             // 
@@ -567,6 +569,13 @@
             this.skinPanel2.Size = new System.Drawing.Size(362, 669);
             this.skinPanel2.TabIndex = 4;
             // 
+            // menuBikeMap
+            // 
+            this.menuBikeMap.Name = "menuBikeMap";
+            this.menuBikeMap.Size = new System.Drawing.Size(152, 24);
+            this.menuBikeMap.Text = "骑行地图";
+            this.menuBikeMap.Click += new System.EventHandler(this.menuBikeMap_Click);
+            // 
             // TinyGIS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -653,6 +662,7 @@
         private System.Windows.Forms.ToolStripMenuItem DEMToolStripMenuItem;
         private CCWin.SkinControl.SkinPanel skinPanel1;
         private CCWin.SkinControl.SkinPanel skinPanel2;
+        private System.Windows.Forms.ToolStripMenuItem menuBikeMap;
     }
 }
 

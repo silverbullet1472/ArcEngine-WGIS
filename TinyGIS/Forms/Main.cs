@@ -33,6 +33,7 @@ namespace TinyGIS
         public TinyGIS()
         {
             InitializeComponent();
+            this.WindowState = FormWindowState.Maximized;
             pMapUnits = "Unknown";
             SynchronizeEagleEye();
         }
@@ -737,6 +738,25 @@ namespace TinyGIS
             }
             axMapControl1.Refresh();
         }
+
+        private void menuBikeMap_Click(object sender, EventArgs e)
+        {
+            IEnumLayer pEnumLayer = axMapControl1.Map.Layers;
+            pEnumLayer.Reset();
+
+            ILayer pLayer = pEnumLayer.Next();
+            while (pLayer != null)
+            {
+                if (pLayer.Name == "1/2-普通地图/生活地图-基础道路")
+                    pLayer.Visible = true;
+                else if (pLayer.Name == "高程")
+                    pLayer.Visible = true;
+                else
+                    pLayer.Visible = false;
+                pLayer = pEnumLayer.Next();
+            }
+            axMapControl1.Refresh();
+        }
         #endregion
 
         #region 14.路径查询
@@ -811,6 +831,8 @@ namespace TinyGIS
             frmDEM.Show(); 
         }
         #endregion
+
+
 
     }
 }
